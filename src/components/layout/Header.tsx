@@ -54,7 +54,7 @@ const Header = () => {
           <div className="hidden md:flex">
             <Button 
               asChild 
-              className="bg-gradient-to-r from-primary to-primary-light hover:from-primary-dark hover:to-primary text-primary-foreground font-medium px-6 py-2 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105"
+              className="bg-primary hover:bg-primary-dark text-primary-foreground font-medium px-6 py-2 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105"
             >
               <Link to="/contact">Get Quote</Link>
             </Button>
@@ -74,33 +74,36 @@ const Header = () => {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
+        {/* Mobile Navigation - Full Screen */}
         {isMenuOpen && (
-          <div className="md:hidden py-4 border-t border-border animate-fade-in-up">
-            <nav className="flex flex-col space-y-3">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`text-sm font-medium py-2 px-3 rounded-lg transition-colors ${
-                    isActive(item.href)
-                      ? "text-primary bg-primary/10"
-                      : "text-foreground hover:text-primary hover:bg-muted"
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
+          <div className="md:hidden fixed inset-0 top-16 bg-background/95 backdrop-blur-sm z-40 animate-fade-in-up">
+            <div className="h-full overflow-y-auto">
+              <nav className="flex flex-col p-6 space-y-6">
+                {navigation.map((item) => (
+                  <Link
+                    key={item.name}
+                    to={item.href}
+                    className={`text-lg font-medium py-4 px-4 rounded-lg transition-colors border ${
+                      isActive(item.href)
+                        ? "text-primary bg-primary/10 border-primary/20"
+                        : "text-foreground hover:text-primary hover:bg-muted border-border"
+                    }`}
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    {item.name}
+                  </Link>
+                ))}
+                <Button 
+                  asChild 
+                  size="lg"
+                  className="bg-primary hover:bg-primary-dark text-primary-foreground mt-8 py-4 text-lg"
                 >
-                  {item.name}
-                </Link>
-              ))}
-              <Button 
-                asChild 
-                className="bg-gradient-to-r from-primary to-primary-light text-primary-foreground mt-4"
-              >
-                <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
-                  Get Quote
-                </Link>
-              </Button>
-            </nav>
+                  <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
+                    Get Quote
+                  </Link>
+                </Button>
+              </nav>
+            </div>
           </div>
         )}
       </div>

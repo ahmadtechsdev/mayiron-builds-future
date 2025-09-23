@@ -14,7 +14,7 @@ const Hero = () => {
         <div className="absolute bottom-40 right-10 w-24 h-24 border-2 border-steel/20 rounded-lg fabrication-float" style={{ animationDelay: '2s' }}></div>
       </div>
 
-      <div className="container mx-auto px-4 py-20 relative z-10">
+      <div className="page-container py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center min-h-[80vh]">
           {/* Content */}
           <div className="space-y-8 animate-fade-in-up">
@@ -62,7 +62,7 @@ const Hero = () => {
               <Button 
                 asChild 
                 size="lg"
-                className="bg-gradient-to-r from-primary to-primary-light hover:from-primary-dark hover:to-primary text-primary-foreground font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 group"
+                className="bg-primary hover:bg-primary-dark text-primary-foreground font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 group"
               >
                 <Link to="/contact">
                   Get Free Quote

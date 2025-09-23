@@ -38,7 +38,7 @@ const About = () => {
     <Layout>
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-b from-background to-muted/30">
-        <div className="container mx-auto px-4">
+        <div className="page-container">
           <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in-up">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground">
               About MAY-IRON
@@ -46,14 +46,14 @@ const About = () => {
             <p className="text-xl md:text-2xl text-muted-foreground">
               Innovative Engineering for the Modern World
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
         </div>
       </section>
 
       {/* Company Overview */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="page-container">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6 animate-fade-in-up">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground">
@@ -94,7 +94,7 @@ const About = () => {
 
       {/* Vision & Mission */}
       <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
+        <div className="page-container">
           <div className="grid md:grid-cols-2 gap-12">
             <Card className="steel-card animate-fade-in-up">
               <CardHeader className="text-center pb-4">
@@ -133,7 +133,7 @@ const About = () => {
 
       {/* Core Values */}
       <section className="py-20 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="page-container">
           <div className="text-center space-y-4 mb-16 animate-fade-in-up">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Our Core Values
@@ -166,7 +166,7 @@ const About = () => {
 
       {/* Company Timeline */}
       <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
+        <div className="page-container">
           <div className="text-center space-y-4 mb-16 animate-fade-in-up">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Our Journey
@@ -179,7 +179,7 @@ const About = () => {
           <div className="max-w-4xl mx-auto">
             <div className="relative">
               {/* Timeline Line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary to-secondary"></div>
+              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary"></div>
               
               {milestones.map((milestone, index) => (
                 <div 
@@ -187,7 +187,7 @@ const About = () => {
                   className="relative flex items-start space-x-8 pb-12 animate-fade-in-up"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
-                  <div className="w-16 h-16 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center text-white font-bold text-sm z-10">
+                  <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center text-white font-bold text-sm z-10">
                     {milestone.year}
                   </div>
                   <div className="flex-1 pt-2">

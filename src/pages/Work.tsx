@@ -1,6 +1,7 @@
 import Layout from "@/components/layout/Layout";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import ImageModal from "@/components/ui/ImageModal";
 import securityDoor from "@/assets/security-door-1.jpg";
 import cncCutting from "@/assets/cnc-cutting.jpg";
 import ironGate from "@/assets/iron-gate.jpg";
@@ -18,49 +19,56 @@ const Work = () => {
       id: 1,
       image: securityDoor,
       title: "Premium Steel Security Door",
-      category: "Security Doors",
-      description: "Custom-designed steel security door with intricate geometric patterns and maximum protection features.",
-      features: ["High-grade steel construction", "Multi-point locking system", "Weather-resistant coating"]
+      category: "Security Doors"
     },
     {
       id: 2,
       image: cncCutting,
       title: "Precision CNC Laser Cutting",
-      category: "CNC Cutting",
-      description: "Advanced CNC laser cutting services for complex metal components with exceptional precision.",
-      features: ["±0.1mm precision", "Multiple material compatibility", "Complex pattern capability"]
+      category: "CNC Cutting"
     },
     {
       id: 3,
       image: ironGate,
-      title: "Decorative Iron Gate",
-      category: "Custom Gates",
-      description: "Elegant custom iron gate featuring decorative patterns and professional finishing.",
-      features: ["Custom design patterns", "Corrosion-resistant finish", "Automated opening system"]
+      title: "Decorative Iron Gate", 
+      category: "Custom Gates"
     },
     {
       id: 4,
       image: workshopTools,
       title: "Professional Workshop Setup",
-      category: "Workshop",
-      description: "State-of-the-art metalworking tools and equipment for precision fabrication processes.",
-      features: ["Advanced CNC machines", "Quality control systems", "Safety compliance"]
+      category: "Workshop"
     },
     {
       id: 5,
       image: doorInstallation,
       title: "Security Door Installation",
-      category: "Installation",
-      description: "Professional installation services ensuring perfect fit and optimal security performance.",
-      features: ["Expert installation team", "Quality assurance check", "Post-installation support"]
+      category: "Installation"
     },
     {
       id: 6,
       image: heroImage,
       title: "Industrial Fabrication Workshop",
-      category: "Workshop",
-      description: "Complete metal fabrication facility equipped with modern machinery and skilled technicians.",
-      features: ["Full fabrication capability", "Quality control processes", "Timely project delivery"]
+      category: "Workshop"
+    },
+    // Add more projects to demonstrate gallery
+    {
+      id: 7,
+      image: securityDoor,
+      title: "Residential Security Door",
+      category: "Security Doors"
+    },
+    {
+      id: 8,
+      image: ironGate,
+      title: "Commercial Gate System",
+      category: "Custom Gates"
+    },
+    {
+      id: 9,
+      image: cncCutting,
+      title: "Industrial CNC Work",
+      category: "CNC Cutting"
     }
   ];
 
@@ -71,8 +79,8 @@ const Work = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-b from-background to-muted/30">
-        <div className="container mx-auto px-4">
+      <section className="py-20 bg-muted/30">
+        <div className="page-container">
           <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in-up">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground">
               Our Work Portfolio
@@ -80,14 +88,14 @@ const Work = () => {
             <p className="text-xl md:text-2xl text-muted-foreground">
               Showcasing Excellence in Metal Fabrication and Engineering
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
         </div>
       </section>
 
       {/* Portfolio Stats */}
-      <section className="py-12 bg-gradient-to-r from-primary to-secondary text-white">
-        <div className="container mx-auto px-4">
+      <section className="py-12 bg-primary text-white">
+        <div className="page-container">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div className="animate-fade-in-up">
               <div className="text-3xl md:text-4xl font-bold mb-2">500+</div>
@@ -111,7 +119,7 @@ const Work = () => {
 
       {/* Portfolio Filter */}
       <section className="py-12 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="page-container">
           <div className="flex flex-wrap justify-center gap-4 mb-12 animate-fade-in-up">
             {categories.map((category) => (
               <Button
@@ -120,7 +128,7 @@ const Work = () => {
                 onClick={() => setSelectedCategory(category)}
                 className={`px-6 py-2 rounded-full transition-all duration-300 ${
                   selectedCategory === category
-                    ? "bg-gradient-to-r from-primary to-secondary text-primary-foreground shadow-lg"
+                    ? "bg-primary text-primary-foreground shadow-lg"
                     : "border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground"
                 }`}
               >
@@ -129,44 +137,36 @@ const Work = () => {
             ))}
           </div>
 
-          {/* Portfolio Grid */}
-          <div className="gallery-grid">
+          {/* Portfolio Gallery Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredProjects.map((project, index) => (
-              <div 
+              <ImageModal
                 key={project.id}
-                className="steel-card animate-fade-in-up group"
-                style={{ animationDelay: `${index * 0.1}s` }}
+                src={project.image}
+                alt={project.title}
               >
-                <div className="relative overflow-hidden rounded-t-lg">
+                <div 
+                  className="relative overflow-hidden rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 animate-fade-in-up group"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
                   <img 
                     src={project.image} 
                     alt={project.title}
                     className="w-full h-64 object-cover transition-transform duration-500 group-hover:scale-110"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                  <div className="absolute top-4 left-4 bg-secondary text-secondary-foreground px-3 py-1 rounded-full text-sm font-medium">
+                  
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  
+                  <div className="absolute top-4 left-4 bg-primary text-primary-foreground px-3 py-1 rounded-full text-sm font-medium">
                     {project.category}
                   </div>
-                </div>
-                
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-foreground mb-3 group-hover:text-primary transition-colors">
-                    {project.title}
-                  </h3>
-                  <p className="text-muted-foreground mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
                   
-                  <ul className="space-y-2">
-                    {project.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-sm">
-                        <div className="w-2 h-2 bg-primary rounded-full mr-3"></div>
-                        <span className="text-foreground">{feature}</span>
-                      </li>
-                    ))}
-                  </ul>
+                  <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <h3 className="font-bold text-lg mb-1">{project.title}</h3>
+                    <p className="text-sm text-white/90">Click to view full size</p>
+                  </div>
                 </div>
-              </div>
+              </ImageModal>
             ))}
           </div>
         </div>
@@ -174,7 +174,7 @@ const Work = () => {
 
       {/* Call to Action */}
       <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
+        <div className="page-container">
           <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground">
               Ready to Start Your Project?
@@ -185,7 +185,7 @@ const Work = () => {
             <Button 
               asChild 
               size="lg"
-              className="bg-gradient-to-r from-primary to-primary-light hover:from-primary-dark hover:to-primary text-primary-foreground font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105"
+              className="bg-primary hover:bg-primary-dark text-primary-foreground font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105"
             >
               <a href="/contact">Get Free Consultation</a>
             </Button>

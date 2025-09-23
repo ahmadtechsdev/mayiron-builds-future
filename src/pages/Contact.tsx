@@ -91,7 +91,7 @@ const Contact = () => {
     <Layout>
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-b from-background to-muted/30">
-        <div className="container mx-auto px-4">
+        <div className="page-container">
           <div className="max-w-4xl mx-auto text-center space-y-6 animate-fade-in-up">
             <h1 className="text-4xl md:text-6xl font-bold text-foreground">
               Contact Us
@@ -99,14 +99,14 @@ const Contact = () => {
             <p className="text-xl md:text-2xl text-muted-foreground">
               Let's Discuss Your Metal Fabrication Needs
             </p>
-            <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            <div className="w-24 h-1 bg-primary mx-auto rounded-full"></div>
           </div>
         </div>
       </section>
 
       {/* Contact Information Cards */}
       <section className="py-12 bg-background">
-        <div className="container mx-auto px-4">
+        <div className="page-container">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
             {contactInfo.map((info, index) => {
               const Icon = info.icon;
@@ -143,7 +143,7 @@ const Contact = () => {
 
       {/* Contact Form and Map Section */}
       <section className="py-20 bg-muted/30">
-        <div className="container mx-auto px-4">
+        <div className="page-container">
           <div className="grid lg:grid-cols-2 gap-16">
             {/* Contact Form */}
             <div className="animate-fade-in-up">
@@ -261,7 +261,7 @@ const Contact = () => {
                     <Button 
                       type="submit" 
                       disabled={isSubmitting}
-                      className="w-full bg-gradient-to-r from-primary to-primary-light hover:from-primary-dark hover:to-primary text-primary-foreground font-semibold py-3 rounded-lg transition-all duration-300 hover:shadow-lg disabled:opacity-50"
+                      className="w-full bg-primary hover:bg-primary-dark text-primary-foreground font-semibold py-3 rounded-lg transition-all duration-300 hover:shadow-lg disabled:opacity-50"
                     >
                       {isSubmitting ? (
                         <>

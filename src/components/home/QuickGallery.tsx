@@ -48,7 +48,7 @@ const QuickGallery = () => {
 
   return (
     <section className="py-20 bg-background">
-      <div className="container mx-auto px-4">
+      <div className="page-container">
         <div className="text-center space-y-4 mb-16 animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
             Our Craftsmanship
@@ -87,7 +87,7 @@ const QuickGallery = () => {
           <Button 
             asChild 
             size="lg"
-            className="bg-gradient-to-r from-primary to-primary-light hover:from-primary-dark hover:to-primary text-primary-foreground font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 group"
+            className="bg-primary hover:bg-primary-dark text-primary-foreground font-semibold px-8 py-3 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105 group"
           >
             <Link to="/work">
               View Full Portfolio

@@ -46,11 +46,10 @@ All colors MUST be HSL.
     --input: 210 40% 96%;
     --ring: 210 100% 25%;
 
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
-    --gradient-secondary: linear-gradient(135deg, hsl(var(--secondary)), hsl(var(--secondary-light)));
-    --gradient-steel: linear-gradient(135deg, hsl(var(--steel-light)), hsl(var(--steel)));
-    --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 40% 98%));
+    /* Simplified Design Tokens */
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 40% 98%));
+    --gradient-accent: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --surface-elevated: hsl(0 0% 99%);
 
     /* Shadows */
     --shadow-steel: 0 10px 30px -10px hsl(var(--steel) / 0.3);
@@ -157,7 +156,12 @@ All colors MUST be HSL.
 
   /* Social Banner */
   .social-banner {
-    @apply bg-gradient-to-r from-primary to-secondary text-primary-foreground;
+    @apply bg-primary text-primary-foreground;
+  }
+
+  /* Container Improvements */
+  .page-container {
+    @apply container mx-auto px-6 md:px-8 lg:px-12 xl:px-16;
   }
 
   /* Hero Variants */

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CallToAction = () => {
   return (
-    <section className="py-20 bg-gradient-to-r from-steel-dark to-primary text-white relative overflow-hidden">
+    <section className="py-20 bg-primary text-white relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-10 left-10 w-32 h-32 border-2 border-white rounded-lg fabrication-float"></div>
@@ -12,7 +12,7 @@ const CallToAction = () => {
         <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-white/20 rounded-lg fabrication-pulse"></div>
       </div>
 
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="page-container relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8 animate-fade-in-up">
           <h2 className="text-3xl md:text-5xl font-bold leading-tight">
             Ready to Start Your Next Project?
