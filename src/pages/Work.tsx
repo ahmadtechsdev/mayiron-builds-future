@@ -2,73 +2,72 @@ import Layout from "@/components/layout/Layout";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import ImageModal from "@/components/ui/ImageModal";
-import securityDoor from "@/assets/security-door-1.jpg";
-import cncCutting from "@/assets/cnc-cutting.jpg";
-import ironGate from "@/assets/iron-gate.jpg";
-import workshopTools from "@/assets/workshop-tools.jpg";
-import doorInstallation from "@/assets/door-installation.jpg";
-import heroImage from "@/assets/hero-fabrication.jpg";
+import decorativePanel from "@/assets/decorative-panel.jpg";
+import securityDoors from "@/assets/security-doors.jpg";
+import decorativeGate from "@/assets/decorative-gate.jpg";
+import decorativePlanters from "@/assets/decorative-planters.jpg";
+import teamWorkshop from "@/assets/team-workshop.jpg";
 
 const Work = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ["All", "Security Doors", "CNC Cutting", "Custom Gates", "Workshop", "Installation"];
+  const categories = ["All", "Security Doors", "Custom Fabrication", "Custom Gates", "Garden Accessories", "Our Team"];
 
   const projects = [
     {
       id: 1,
-      image: securityDoor,
-      title: "Premium Steel Security Door",
-      category: "Security Doors"
+      image: decorativePanel,
+      title: "Decorative Metal Panel",
+      category: "Custom Fabrication"
     },
     {
       id: 2,
-      image: cncCutting,
-      title: "Precision CNC Laser Cutting",
-      category: "CNC Cutting"
+      image: securityDoors,
+      title: "Premium Security Doors",
+      category: "Security Doors"
     },
     {
       id: 3,
-      image: ironGate,
-      title: "Decorative Iron Gate", 
+      image: decorativeGate,
+      title: "Ornate Metal Gate", 
       category: "Custom Gates"
     },
     {
       id: 4,
-      image: workshopTools,
-      title: "Professional Workshop Setup",
-      category: "Workshop"
+      image: decorativePlanters,
+      title: "Decorative Garden Planters",
+      category: "Garden Accessories"
     },
     {
       id: 5,
-      image: doorInstallation,
-      title: "Security Door Installation",
-      category: "Installation"
+      image: teamWorkshop,
+      title: "Professional Workshop Team",
+      category: "Our Team"
     },
+    // Duplicate some items for more gallery content
     {
       id: 6,
-      image: heroImage,
-      title: "Industrial Fabrication Workshop",
-      category: "Workshop"
+      image: decorativePanel,
+      title: "Custom Laser Cut Panel",
+      category: "Custom Fabrication"
     },
-    // Add more projects to demonstrate gallery
     {
       id: 7,
-      image: securityDoor,
-      title: "Residential Security Door",
+      image: securityDoors,
+      title: "Residential Security Doors",
       category: "Security Doors"
     },
     {
       id: 8,
-      image: ironGate,
+      image: decorativeGate,
       title: "Commercial Gate System",
       category: "Custom Gates"
     },
     {
       id: 9,
-      image: cncCutting,
-      title: "Industrial CNC Work",
-      category: "CNC Cutting"
+      image: decorativePlanters,
+      title: "Islamic Pattern Planters",
+      category: "Garden Accessories"
     }
   ];
 

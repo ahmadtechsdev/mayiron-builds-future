@@ -7,6 +7,7 @@ import Testimonials from "@/components/home/Testimonials";
 import Process from "@/components/home/Process";
 import FAQ from "@/components/home/FAQ";
 import CallToAction from "@/components/home/CallToAction";
+import Map from "@/components/ui/Map";
 
 const Index = () => {
   return (
@@ -18,6 +19,7 @@ const Index = () => {
       <WhyChooseUs />
       <Testimonials />
       <FAQ />
+      <Map />
       <CallToAction />
     </Layout>
   );

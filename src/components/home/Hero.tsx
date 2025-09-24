@@ -1,7 +1,7 @@
 import { ArrowRight, Shield, Zap, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-fabrication.jpg";
+import teamWorkshop from "@/assets/team-workshop.jpg";
 
 const Hero = () => {
   return (
@@ -84,8 +84,8 @@ const Hero = () => {
           <div className="relative animate-slide-in-right">
             <div className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
               <img 
-                src={heroImage} 
-                alt="Professional metal fabrication workshop with CNC machines and security doors"
+                src={teamWorkshop} 
+                alt="MAY-IRON team working in professional fabrication workshop"
                 className="w-full h-[500px] lg:h-[600px] object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>

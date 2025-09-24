@@ -1,5 +1,6 @@
-import { Wrench, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
+import { Phone, Mail, MapPin, Facebook, Twitter, Instagram, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
+import mayironLogo from "@/assets/mayiron-logo.png";
 
 const Footer = () => {
   return (
@@ -9,13 +10,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-2">
-              <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center">
-                <Wrench className="h-6 w-6 text-white" />
-              </div>
-              <div className="flex flex-col">
-                <span className="text-xl font-bold">MAY-IRON</span>
-                <span className="text-xs text-gray-300">Professional Fabrication</span>
-              </div>
+              <img 
+                src={mayironLogo} 
+                alt="MAY-IRON" 
+                className="h-10 w-auto filter brightness-0 invert"
+              />
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed">
               Leading provider in metal fabrication industry, specializing in high-quality steel security doors with cutting-edge CNC metal equipment.
@@ -59,15 +58,15 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center space-x-2 text-gray-300">
                 <Phone className="h-4 w-4 text-secondary" />
-                <span>+234 802 345 6789</span>
+                <span>+234 916 854 4137</span>
               </div>
               <div className="flex items-center space-x-2 text-gray-300">
                 <Mail className="h-4 w-4 text-secondary" />
-                <span>info@mayiron.com</span>
+                <span>mayirondeco@gmail.com</span>
               </div>
               <div className="flex items-center space-x-2 text-gray-300">
                 <MapPin className="h-4 w-4 text-secondary" />
-                <span>Lagos, Nigeria</span>
+                <span>Plot 1019, opp. Gudu Electrical Parts Market, Gudu, FCT Abuja, Nigeria.</span>
               </div>
             </div>
             

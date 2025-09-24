@@ -7,11 +7,11 @@ const SocialBanner = () => {
         <div className="flex items-center space-x-4 mb-2 sm:mb-0">
           <div className="flex items-center space-x-2">
             <Phone className="h-4 w-4" />
-            <span>+234 802 345 6789</span>
+            <span>+234 916 854 4137</span>
           </div>
           <div className="flex items-center space-x-2">
             <Mail className="h-4 w-4" />
-            <span>info@mayiron.com</span>
+            <span>mayirondeco@gmail.com</span>
           </div>
         </div>
         

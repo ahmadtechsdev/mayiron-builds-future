@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Menu, X, Wrench } from "lucide-react";
+import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import mayironLogo from "@/assets/mayiron-logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,13 +23,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2 group">
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center fabrication-pulse">
-              <Wrench className="h-6 w-6 text-primary-foreground" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-xl font-bold text-primary">MAY-IRON</span>
-              <span className="text-xs text-muted-foreground -mt-1">Professional Fabrication</span>
-            </div>
+            <img 
+              src={mayironLogo} 
+              alt="MAY-IRON" 
+              className="h-12 w-auto"
+            />
           </Link>
 
           {/* Desktop Navigation */}

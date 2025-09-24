@@ -6,6 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Phone, Mail, MapPin, Clock, Send, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import Map from "@/components/ui/Map";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -31,13 +32,28 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      // Create mailto URL
+      const subject = encodeURIComponent(`${formData.subject} - ${formData.name}`);
+      const body = encodeURIComponent(`
+Name: ${formData.name}
+Email: ${formData.email}
+Phone: ${formData.phone || 'Not provided'}
+Company: ${formData.company || 'Not provided'}
+Subject: ${formData.subject}
+
+Message:
+${formData.message}
+      `);
+      
+      const mailtoUrl = `mailto:mayirondeco@gmail.com?subject=${subject}&body=${body}`;
+      window.location.href = mailtoUrl;
+      
       toast({
-        title: "Message Sent Successfully!",
-        description: "We'll get back to you within 24 hours.",
+        title: "Opening Email Client",
+        description: "Your default email client will open with the message pre-filled.",
       });
+      
       setFormData({
         name: "",
         email: "",
@@ -46,26 +62,34 @@ const Contact = () => {
         subject: "General Inquiry",
         message: ""
       });
-    }, 2000);
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "There was a problem opening your email client. Please contact us directly.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const contactInfo = [
     {
       icon: Phone,
       title: "Call Us",
-      details: ["+234 802 345 6789", "+234 901 234 5678"],
+      details: ["+234 916 854 4137"],
       description: "Available Monday to Friday, 8:00 AM - 6:00 PM"
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: ["info@mayiron.com", "sales@mayiron.com"],
+      details: ["mayirondeco@gmail.com"],
       description: "We'll respond within 24 hours"
     },
     {
       icon: MapPin,
       title: "Visit Us",
-      details: ["Lagos, Nigeria"],
+      details: ["Plot 1019, opp. Gudu Electrical Parts Market, Gudu, FCT Abuja, Nigeria."],
       description: "Schedule an appointment for site visit"
     },
     {
@@ -348,6 +372,9 @@ const Contact = () => {
           </div>
         </div>
       </section>
+
+      {/* Map Section */}
+      <Map />
     </Layout>
   );
 };

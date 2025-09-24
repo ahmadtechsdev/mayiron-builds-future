@@ -1,48 +1,48 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import securityDoor from "@/assets/security-door-1.jpg";
-import cncCutting from "@/assets/cnc-cutting.jpg";
-import ironGate from "@/assets/iron-gate.jpg";
-import workshopTools from "@/assets/workshop-tools.jpg";
-import doorInstallation from "@/assets/door-installation.jpg";
+import decorativePanel from "@/assets/decorative-panel.jpg";
+import securityDoors from "@/assets/security-doors.jpg";
+import decorativeGate from "@/assets/decorative-gate.jpg";
+import decorativePlanters from "@/assets/decorative-planters.jpg";
+import teamWorkshop from "@/assets/team-workshop.jpg";
 
 const QuickGallery = () => {
   const galleryItems = [
     {
       id: 1,
-      image: securityDoor,
-      title: "Premium Security Door",
-      category: "Security Doors",
-      description: "Custom steel security door with geometric patterns"
+      image: decorativePanel,
+      title: "Decorative Metal Panel",
+      category: "Custom Fabrication",
+      description: "Intricate laser-cut decorative panel with geometric patterns"
     },
     {
       id: 2,
-      image: cncCutting,
-      title: "CNC Laser Cutting",
-      category: "Manufacturing",
-      description: "Precision laser cutting in action"
+      image: securityDoors,
+      title: "Premium Security Doors",
+      category: "Security Doors",
+      description: "White steel security doors with diamond pattern design"
     },
     {
       id: 3,
-      image: ironGate,
-      title: "Decorative Iron Gate",
-      category: "Custom Fabrication",
-      description: "Elegant custom iron gate with intricate patterns"
+      image: decorativeGate,
+      title: "Ornate Metal Gate",
+      category: "Custom Gates",
+      description: "Elegant residential gate with artistic patterns"
     },
     {
       id: 4,
-      image: workshopTools,
-      title: "Professional Equipment",
-      category: "Workshop",
-      description: "State-of-the-art metalworking tools and equipment"
+      image: decorativePlanters,
+      title: "Decorative Planters",
+      category: "Garden Accessories",
+      description: "White decorative metal planters with Islamic patterns"
     },
     {
       id: 5,
-      image: doorInstallation,
-      title: "Door Installation",
-      category: "Installation",
-      description: "Professional security door installation service"
+      image: teamWorkshop,
+      title: "Workshop Team",
+      category: "Our Team",
+      description: "Our professional team at work in the fabrication workshop"
     }
   ];
 
