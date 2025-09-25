@@ -316,7 +316,7 @@ ${formData.message}
                   <div className="flex items-start space-x-3">
                     <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
                     <div>
-                      <div className="font-semibold text-foreground">15+ Years Experience</div>
+                      <div className="font-semibold text-foreground">10+ Years Experience</div>
                       <div className="text-sm text-muted-foreground">Proven expertise in metal fabrication</div>
                     </div>
                   </div>
