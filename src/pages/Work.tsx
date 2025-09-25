@@ -7,6 +7,8 @@ import securityDoors from "@/assets/security-doors.jpg";
 import decorativeGate from "@/assets/decorative-gate.jpg";
 import decorativePlanters from "@/assets/decorative-planters.jpg";
 import teamWorkshop from "@/assets/team-workshop.jpg";
+import gardenAccessories from "@/assets/garden-accessories.jpg";
+import residentialGate from "@/assets/residential-gate.jpg";
 
 const Work = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -17,7 +19,7 @@ const Work = () => {
     {
       id: 1,
       image: decorativePanel,
-      title: "Decorative Metal Panel",
+      title: "Custom Wood & Metal Frame",
       category: "Custom Fabrication"
     },
     {
@@ -29,13 +31,13 @@ const Work = () => {
     {
       id: 3,
       image: decorativeGate,
-      title: "Ornate Metal Gate", 
+      title: "Ornate Decorative Gate", 
       category: "Custom Gates"
     },
     {
       id: 4,
       image: decorativePlanters,
-      title: "Decorative Garden Planters",
+      title: "Decorative Metal Planters",
       category: "Garden Accessories"
     },
     {
@@ -44,30 +46,29 @@ const Work = () => {
       title: "Professional Workshop Team",
       category: "Our Team"
     },
-    // Duplicate some items for more gallery content
     {
       id: 6,
-      image: decorativePanel,
-      title: "Custom Laser Cut Panel",
-      category: "Custom Fabrication"
+      image: gardenAccessories,
+      title: "Garden Decorative Accessories",
+      category: "Garden Accessories"
     },
     {
       id: 7,
-      image: securityDoors,
-      title: "Residential Security Doors",
-      category: "Security Doors"
-    },
-    {
-      id: 8,
-      image: decorativeGate,
-      title: "Commercial Gate System",
+      image: residentialGate,
+      title: "Residential Metal Gate",
       category: "Custom Gates"
     },
     {
+      id: 8,
+      image: decorativePanel,
+      title: "Laser Cut Decorative Panel",
+      category: "Custom Fabrication"
+    },
+    {
       id: 9,
-      image: decorativePlanters,
-      title: "Islamic Pattern Planters",
-      category: "Garden Accessories"
+      image: securityDoors,
+      title: "Heavy Duty Security Doors",
+      category: "Security Doors"
     }
   ];
 

@@ -2,16 +2,16 @@ import { Facebook, Twitter, Instagram, Linkedin, Phone, Mail } from "lucide-reac
 
 const SocialBanner = () => {
   return (
-    <div className="social-banner py-2 px-4">
+    <div className="bg-primary/10 text-primary py-3 px-4">
       <div className="container mx-auto flex flex-col sm:flex-row items-center justify-between text-sm">
-        <div className="flex items-center space-x-4 mb-2 sm:mb-0">
+        <div className="flex flex-col sm:flex-row items-center space-y-1 sm:space-y-0 sm:space-x-6 mb-2 sm:mb-0">
           <div className="flex items-center space-x-2">
             <Phone className="h-4 w-4" />
-            <span>+234 916 854 4137</span>
+            <span className="font-medium">09168544137</span>
           </div>
           <div className="flex items-center space-x-2">
             <Mail className="h-4 w-4" />
-            <span>mayirondeco@gmail.com</span>
+            <span className="font-medium">mayirondeco@gmail.com</span>
           </div>
         </div>
         

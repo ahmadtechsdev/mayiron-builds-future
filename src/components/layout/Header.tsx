@@ -75,9 +75,28 @@ const Header = () => {
 
         {/* Mobile Navigation - Full Screen */}
         {isMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-16 bg-background/95 backdrop-blur-sm z-40 animate-fade-in-up">
+          <div className="md:hidden fixed inset-0 top-0 bg-background z-50 animate-fade-in-up">
             <div className="h-full overflow-y-auto">
-              <nav className="flex flex-col p-6 space-y-6">
+              {/* Mobile Header */}
+              <div className="flex items-center justify-between h-16 px-4 border-b border-border">
+                <Link to="/" className="flex items-center space-x-2" onClick={() => setIsMenuOpen(false)}>
+                  <img 
+                    src={mayironLogo} 
+                    alt="MAY-IRON" 
+                    className="h-10 w-auto"
+                  />
+                </Link>
+                <button
+                  className="p-2 rounded-lg hover:bg-muted transition-colors"
+                  onClick={() => setIsMenuOpen(false)}
+                  aria-label="Close menu"
+                >
+                  <X className="h-6 w-6" />
+                </button>
+              </div>
+              
+              {/* Mobile Navigation */}
+              <nav className="flex flex-col p-6 space-y-4">
                 {navigation.map((item) => (
                   <Link
                     key={item.name}
