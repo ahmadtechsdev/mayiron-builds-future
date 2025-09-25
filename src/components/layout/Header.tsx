@@ -75,7 +75,7 @@ const Header = () => {
 
         {/* Mobile Navigation - Full Screen */}
         {isMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-0 bg-background z-50 animate-fade-in-up">
+          <div className="md:hidden fixed inset-0 top-0 bg-background z-[9999] h-screen w-screen">
             <div className="h-full overflow-y-auto">
               {/* Mobile Header */}
               <div className="flex items-center justify-between h-16 px-4 border-b border-border">

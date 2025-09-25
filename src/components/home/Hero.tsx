@@ -23,7 +23,7 @@ const Hero = () => {
                 Forging Precision, Building Security & Empowering Growth
               </h1>
               <p className="hero-subtitle">
-                Leading provider in metal fabrication industry, specializing in high-quality steel security doors with cutting-edge CNC metal equipment for unparalleled precision and durability.
+                One of the leading provider in metal fabrication industry, specializing in high-quality steel security doors with cutting-edge CNC metal equipment for unparalleled precision and durability.
               </p>
             </div>
 
@@ -93,12 +93,12 @@ const Hero = () => {
             
             {/* Floating Stats Cards */}
             <div className="absolute -top-6 -left-6 bg-white rounded-lg shadow-lg p-4 fabrication-float">
-              <div className="text-2xl font-bold text-primary">15+</div>
+              <div className="text-2xl font-bold text-primary">10+</div>
               <div className="text-sm text-muted-foreground">Years Experience</div>
             </div>
             
             <div className="absolute -bottom-6 -right-6 bg-white rounded-lg shadow-lg p-4 fabrication-pulse">
-              <div className="text-2xl font-bold text-secondary">500+</div>
+              <div className="text-2xl font-bold text-secondary">100+</div>
               <div className="text-sm text-muted-foreground">Projects Completed</div>
             </div>
           </div>

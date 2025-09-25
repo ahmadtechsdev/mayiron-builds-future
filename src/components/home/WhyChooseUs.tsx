@@ -4,8 +4,8 @@ const WhyChooseUs = () => {
   const reasons = [
     {
       icon: Award,
-      title: "15+ Years of Excellence",
-      description: "Over a decade and a half of proven expertise in metal fabrication industry with countless successful projects and satisfied clients."
+      title: "10+ Years of Excellence",
+      description: "Over a decade of proven expertise in metal fabrication industry with countless successful projects and satisfied clients."
     },
     {
       icon: Lightbulb,
@@ -75,11 +75,11 @@ const WhyChooseUs = () => {
         <div className="mt-20 p-8 bg-primary rounded-2xl text-white animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2">500+</div>
+              <div className="text-3xl md:text-4xl font-bold mb-2">100+</div>
               <div className="text-primary-foreground/80">Projects Completed</div>
             </div>
             <div>
-              <div className="text-3xl md:text-4xl font-bold mb-2">15+</div>
+              <div className="text-3xl md:text-4xl font-bold mb-2">10+</div>
               <div className="text-primary-foreground/80">Years Experience</div>
             </div>
             <div>
