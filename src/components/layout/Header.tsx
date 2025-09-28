@@ -11,7 +11,7 @@ const Header = () => {
   const navigation = [
     { name: "Home", href: "/" },
     { name: "About Us", href: "/about" },
-    { name: "Our Work", href: "/work" },
+    { name: "Our Work/Gallery", href: "/work" },
     { name: "Contact", href: "/contact" },
   ];
 
@@ -49,8 +49,21 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
-          <div className="hidden md:flex">
+          {/* CTA Buttons */}
+          <div className="hidden md:flex items-center space-x-3">
+            <Button 
+              asChild 
+              variant="outline"
+              className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground font-medium px-4 py-2 rounded-lg transition-all duration-300"
+            >
+              <a 
+                href="https://drive.google.com/uc?export=download&id=1054PKXo2KuLeL1wvpNGtpGKsdTYA4CF1" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                Company Profile
+              </a>
+            </Button>
             <Button 
               asChild 
               className="bg-primary hover:bg-primary-dark text-primary-foreground font-medium px-6 py-2 rounded-lg transition-all duration-300 hover:shadow-lg hover:scale-105"
@@ -113,8 +126,23 @@ const Header = () => {
                 ))}
                 <Button 
                   asChild 
+                  variant="outline"
                   size="lg"
-                  className="bg-primary hover:bg-primary-dark text-primary-foreground mt-8 py-4 text-lg"
+                  className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground mt-4 py-4 text-lg"
+                >
+                  <a 
+                    href="https://drive.google.com/uc?export=download&id=1054PKXo2KuLeL1wvpNGtpGKsdTYA4CF1" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Company Profile
+                  </a>
+                </Button>
+                <Button 
+                  asChild 
+                  size="lg"
+                  className="bg-primary hover:bg-primary-dark text-primary-foreground mt-4 py-4 text-lg"
                 >
                   <Link to="/contact" onClick={() => setIsMenuOpen(false)}>
                     Get Quote
