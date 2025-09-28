@@ -77,6 +77,20 @@ const Hero = () => {
               >
                 <Link to="/work">View Our Work</Link>
               </Button>
+              <Button 
+                asChild 
+                variant="outline" 
+                size="lg"
+                className="border-2 border-secondary text-secondary hover:bg-secondary hover:text-secondary-foreground font-semibold px-8 py-3 rounded-lg transition-all duration-300"
+              >
+                <a 
+                  href="https://drive.google.com/uc?export=download&id=1054PKXo2KuLeL1wvpNGtpGKsdTYA4CF1" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                >
+                  Company Profile
+                </a>
+              </Button>
             </div>
           </div>
 

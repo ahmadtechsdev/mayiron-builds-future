@@ -9,11 +9,19 @@ import decorativePlanters from "@/assets/decorative-planters.jpg";
 import teamWorkshop from "@/assets/team-workshop.jpg";
 import gardenAccessories from "@/assets/garden-accessories.jpg";
 import residentialGate from "@/assets/residential-gate.jpg";
+import officeWorkspace from "@/assets/office-workspace.jpg";
+import plasmaCutting from "@/assets/plasma-cutting.jpg";
+import pressBrake from "@/assets/press-brake.jpg";
+import laserCuttingMachine from "@/assets/laser-cutting-machine.jpg";
+import cncOperation from "@/assets/cnc-operation.jpg";
+import designOffice from "@/assets/design-office.jpg";
+import workshopExterior from "@/assets/workshop-exterior.jpg";
+import workshopFacility from "@/assets/workshop-facility.jpg";
 
 const Work = () => {
   const [selectedCategory, setSelectedCategory] = useState("All");
 
-  const categories = ["All", "Security Doors", "Custom Fabrication", "Custom Gates", "Garden Accessories", "Our Team"];
+  const categories = ["All", "Security Doors", "Custom Fabrication", "Custom Gates", "Garden Accessories", "Our Team", "Our Facilities"];
 
   const projects = [
     {
@@ -69,6 +77,54 @@ const Work = () => {
       image: securityDoors,
       title: "Heavy Duty Security Doors",
       category: "Security Doors"
+    },
+    {
+      id: 10,
+      image: officeWorkspace,
+      title: "Modern Office & Design Space",
+      category: "Our Facilities"
+    },
+    {
+      id: 11,
+      image: plasmaCutting,
+      title: "Precision Plasma Cutting",
+      category: "Custom Fabrication"
+    },
+    {
+      id: 12,
+      image: pressBrake,
+      title: "Heavy Duty Press Brake",
+      category: "Our Facilities"
+    },
+    {
+      id: 13,
+      image: laserCuttingMachine,
+      title: "Advanced Laser Cutting System",
+      category: "Custom Fabrication"
+    },
+    {
+      id: 14,
+      image: cncOperation,
+      title: "CNC Plasma Cutting Operation",
+      category: "Custom Fabrication"
+    },
+    {
+      id: 15,
+      image: designOffice,
+      title: "CAD Design & Engineering Office",
+      category: "Our Facilities"
+    },
+    {
+      id: 16,
+      image: workshopExterior,
+      title: "Workshop & Material Storage",
+      category: "Our Facilities"
+    },
+    {
+      id: 17,
+      image: workshopFacility,
+      title: "Production Workshop Facility",
+      category: "Our Facilities"
     }
   ];
 

@@ -33,7 +33,9 @@ const SocialBanner = () => {
               <Twitter className="h-4 w-4" />
             </a>
             <a 
-              href="#" 
+              href="https://www.instagram.com/mayiron_ltd/" 
+              target="_blank"
+              rel="noopener noreferrer"
               className="hover:scale-110 transition-transform duration-200"
               aria-label="Instagram"
             >
